@@ -4,8 +4,9 @@ import requests
 import config
 import pickle
 
-crop_recommend_model = pickle.load(open('../models/Croprecommend.pkl', 'rb'))
-le = pickle.load(open('../models/label_encoder.pkl', 'rb'))
+crop_recommend_model = pickle.load(open('models/Croprecommend.pkl', 'rb'))
+le = pickle.load(open('models/label_encoder.pkl', 'rb'))
+
 
 def weather_fetch(city_name):
     """
