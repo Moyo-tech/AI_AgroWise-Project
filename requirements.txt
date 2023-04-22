@@ -1,0 +1,11 @@
+pandas
+streamlit
+torch
+torchvision 
+numpy
+config
+requests
+scikit-learn
+Pillow
+gunicorn == 20.0.4
+xgboost
