@@ -51,20 +51,33 @@ def app():
     st.title("Crop Recommendation App")
 
     # Get user inputs
-    N = st.number_input("Enter Nitrogen")
-    P = st.number_input("Enter Phosphorous")
-    K = st.number_input("Enter Pottasium")
-    ph = st.number_input("Enter pH")
-    rainfall = st.number_input("Enter Rainfall")
-    city = st.text_input("Enter city name")
+    N = st.number_input("Enter Nitrogen e.g: 90")
+    P = st.number_input("Enter Phosphorous e.g: 42")
+    K = st.number_input("Enter Pottasium e.g: 43")
+    ph = st.number_input("Enter pH e.g: 6.5")
+    rainfall = st.number_input("Enter Rainfall e.g: 202.98")
+    city = st.text_input("Enter city name e.g Kigali, Nairobi")
 
     # Create a button to trigger the crop prediction
     if st.button("Predict"):
-        prediction = crop_prediction(N, P, K, ph, rainfall, city)
-        if prediction is not None:
-            st.success(f"The recommended crop is {prediction}")
+        if not N:
+            st.error("Please enter a value for Nitrogen")
+        if not P:
+            st.error("Please enter a value for Phosphorous")
+        if not K:
+            st.error("Please enter a value for Pottasium")
+        if not ph:
+            st.error("Please enter a value for pH")
+        if not rainfall:
+            st.error("Please enter a value for Rainfall")
+        if not city:
+            st.error("Please enter a value for city name")
         else:
-            st.error("Invalid city name. Please try again.") 
+            prediction = crop_prediction(N, P, K, ph, rainfall, city)
+            if prediction is not None:
+                st.success(f"The recommended crop is {prediction}")
+            else:
+                st.error("Invalid city name. Please try again.") 
 
 # Run the app
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-st.set_page_config(page_title='Model Selection', page_icon='🌱')
+st.set_page_config(page_title='Model Selection', page_icon='🪴')
 
 import model2
 import model1
