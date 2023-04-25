@@ -1,13 +1,18 @@
 # AI_AgroWise-Project
+[Video Explanation Link]()
+
+[Deployed Project On Cloud](https://agrowise-ai-summative.streamlit.app/)
  - [Introduction](#introduction)
--  [How to Use](#how-to-use)
+-  [How to run on Cloud](#how-to-run-cloud)
+-  [How to run Locally](#how-to-run-locally)
+
 
 ## Introduction
 AgroWise is an innovative, AI-powered platform that is set to revolutionize agriculture by providing farmers with intelligent crop recommendations and advanced disease detection capabilities. Building on existing technologies, AgroWise is a sophisticated solution that goes beyond traditional farming practices, offering farmers a smarter, more sustainable way to approach their craft.
 
-## How to use-Cloud
+## How to run-Cloud
 
-[Deployed Project](https://agrowise-ai-summative.streamlit.app/)
+To run the app on the cloud go to this link :  [Deployed Project](https://agrowise-ai-summative.streamlit.app/)
 
 - Crop Recommendation System : The Crop Recommendation system requires you to input the nutrient values of your soil (N-P-K, Rainfall, Ph), as well as your state and city. It's important to note that the N-P-K values entered should be in the form of a ratio. You can refer to a website for further information. Please be aware that when entering your city name, it's best to use commonly recognized names(Kigali) as some remote areas may not be available in the Weather API, which provides humidity and temperature data.
 
