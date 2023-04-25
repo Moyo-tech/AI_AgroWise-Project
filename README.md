@@ -1,5 +1,5 @@
 # AI_AgroWise-Project
-[Video Explanation Link]()
+[Video Explanation Link](https://drive.google.com/file/d/14IkoZy9IAEVGteiBbNrja5Z3mDxnkpZX/view?usp=share_link)
 
 [Deployed Project On Cloud](https://agrowise-ai-summative.streamlit.app/)
  - [Introduction](#introduction)
