@@ -5,6 +5,7 @@
  - [Introduction](#introduction)
 -  [How to run on Cloud](#how-to-run-cloud)
 -  [How to run Locally](#how-to-run-locally)
+-  [Individual Contribution Score Sheet](#individual-contribution-score-sheet)
 
 
 ## Introduction
