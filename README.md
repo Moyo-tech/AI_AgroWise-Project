@@ -21,7 +21,7 @@ To run the app on the cloud go to this link :  [Deployed Project](https://agrowi
 
 ## How to run locally
 - Before the following steps make sure you have virtualenv installed on youur pc and python if not then do  `pip install virtualenv`
-- Clone the complete project with git clone `https://github.com/Gladiator07/Harvestify.git` or you can just download the code and unzip it
+- Clone the complete project with git clone `https://github.com/Moyo-tech/AI_AgroWise-Project.git` or you can just download the code and unzip it
 - Once the project is cloned, open your terminal in the directory where the project was cloned and paste the following block
 
    ```
@@ -33,3 +33,6 @@ To run the app on the cloud go to this link :  [Deployed Project](https://agrowi
     ```python app.py```
     
 - Open the localhost url provided after running app.py and now you can use the project locally in your web browser.
+
+## Individual Contribution Score Sheet
+- [Link to Score Sheet](https://docs.google.com/document/d/1VMWvmAojjGKRfhwuHK-C-9r3nPSGx6gMimYsEalC_eI/edit?usp=sharing)
