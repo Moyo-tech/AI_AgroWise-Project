@@ -30,21 +30,18 @@ def weather_fetch(city_name):
     else:
         return None
 
-def crop_prediction(N, P, K, ph, rainfall, city):
+def crop_prediction(N, P, K, rainfall, temperature, ph, humidity):
     """
     Predicts the crop based on the given inputs and city weather
     :params: N, P, K, ph, rainfall, city
     :return: prediction
     """
-    if weather_fetch(city) != None:
-        temperature, humidity = weather_fetch(city)
-        data = np.array([[N, P, K, rainfall, temperature, ph, humidity]])
-        my_prediction = crop_recommend_model.predict(data)
-        encoded_predict = le.inverse_transform(my_prediction)
-        final_prediction = encoded_predict[0]
-        return final_prediction
-    else:
-        return None
+    data = np.array([[N, P, K, rainfall, temperature, ph, humidity]])
+    my_prediction = crop_recommend_model.predict(data)
+    encoded_predict = le.inverse_transform(my_prediction)
+    final_prediction = encoded_predict[0]
+    return final_prediction
+    
 
 # Define the Streamlit app
 def app():
@@ -56,7 +53,8 @@ def app():
     K = st.number_input("Enter Pottasium e.g: 43")
     ph = st.number_input("Enter pH e.g: 6.5")
     rainfall = st.number_input("Enter Rainfall e.g: 202.98")
-    city = st.text_input("Enter city name e.g Kigali, Nairobi")
+    temperature = st.number_input("Enter Temperature e.g: 20.87")
+    humidity = st.number_input("Enter Humidity e.g: 82.00")
 
     # Create a button to trigger the crop prediction
     if st.button("Predict"):
@@ -70,12 +68,15 @@ def app():
             st.error("Please enter a value for pH")
         if not rainfall:
             st.error("Please enter a value for Rainfall")
-        if not city:
-            st.error("Please enter a value for city name")
+        if not temperature:
+            st.error("Please enter a value for Temperature")
+        if not humidity:
+            st.error("Please enter a value for Humidity")
+        
         else:
-            prediction = crop_prediction(N, P, K, ph, rainfall, city)
+            prediction = crop_prediction(N, P, K, rainfall, temperature, ph, humidity)
             if prediction is not None:
-                st.success(f"The recommended crop is {prediction}")
+                st.success(f"The recommended crop for this soil nutrient is {prediction}")
             else:
                 st.error("Invalid city name. Please try again.") 
 

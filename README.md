@@ -30,8 +30,10 @@ To run the app on the cloud go to this link :  [Deployed Project](https://agrowi
    env/Scripts/Activate.ps1 //In Powershel
    pip install -r requirements.txt 
    ```
+   Note installing the requirements make take time - 10-15mins
+   
 - And finally run the project with
-    ```python app.py```
+    ```streamlit run app.py```
     
 - Open the localhost url provided after running app.py and now you can use the project locally in your web browser.
 
